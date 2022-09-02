@@ -6,6 +6,6 @@ This project is shared by Javascript Mastery. As a tiktok web clone and i just l
  - Youtube Channel: https://www.youtube.com/c/JavaScriptMastery
  - Course Video: https://www.youtube.com/watch?v=CcBHZ0t2Qwc&t=220s
 ## Save point to not forget
- - [ ] Check sanity install again because I can not login Sanity when using proxy and fake 4G :3 ( https://youtu.be/CcBHZ0t2Qwc?t=601 )
+
 ## Lastest watch
- - Link: https://youtu.be/CcBHZ0t2Qwc?t=3201
+ - Link: https://youtu.be/CcBHZ0t2Qwc?t=5600

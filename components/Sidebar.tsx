@@ -1,10 +1,11 @@
-import { useState } from "react";
-import { ImCancelCircle } from "react-icons/im";
-import { AiFillHome, AiOutlineHome, AiOutlineMenu } from "react-icons/ai";
-import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
-import { CgProfile } from "react-icons/cg";
 import Link from "next/link";
+import { useState } from "react";
 import GoogleLogin from "react-google-login";
+import { AiOutlineHome, AiOutlineMenu } from "react-icons/ai";
+import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
+import Discover from "./Discover";
+import Footer from "./Footer";
+import SuggestedAccounts from "./SuggestedAccounts";
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(true);
@@ -14,7 +15,7 @@ const Sidebar = () => {
   return (
     <div>
       <div
-        className="block m-2 ml-4 mt-3 text-xl"
+        className=" m-2 ml-4 mt-3 text-xl block "
         onClick={() => setShowSidebar((prev) => !prev)}
       >
         {showSidebar ? <TbLayoutSidebarLeftCollapse /> : <AiOutlineMenu />}
@@ -31,7 +32,7 @@ const Sidebar = () => {
               </div>
             </Link>
           </div>
-          {!userProfile ? (
+          {!userProfile && (
             <div className="px-2 py-4 hidden xl:block">
               <p className="text-gray-400">Log in to like and comment</p>
               <div className="pr-4 py-2">
@@ -52,14 +53,12 @@ const Sidebar = () => {
                 />
               </div>
             </div>
-          ) : (
-            <div>
-              <CgProfile />
-            </div>
           )}
+          <Discover />
+          <SuggestedAccounts />
+          <Footer />
         </div>
       )}
-      <div></div>
     </div>
   );
 };
