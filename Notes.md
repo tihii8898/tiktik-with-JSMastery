@@ -8,4 +8,4 @@ This project is shared by Javascript Mastery. As a tiktok web clone and i just l
 ## Save point to not forget
 
 ## Lastest watch
- - Link: https://youtu.be/CcBHZ0t2Qwc?t=5600
+ - Link: https://youtu.be/CcBHZ0t2Qwc?t=8959
