@@ -7,12 +7,14 @@ import { createOrGetUser } from "../utils";
 import useAuthStore from "../store/authStore";
 import { IoMdAdd } from "react-icons/io";
 import { AiOutlineLogout } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const { userProfile, addUser, removeUser } = useAuthStore();
+  const router = useRouter();
   return (
     <div className="w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4">
-      <Link href="">
+      <Link href="/">
         <div className="w-[100px] md:w-[130px]">
           <Image
             className="cursor-pointer"
@@ -50,7 +52,8 @@ const Navbar = () => {
               className="px-2"
               onClick={() => {
                 googleLogout();
-                removeUser();
+                removeUser(userProfile);
+                router.push("/");
               }}
             >
               <AiOutlineLogout color="red" fontSize={21} />
