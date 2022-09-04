@@ -6,6 +6,7 @@ import Link from "next/link";
 import { HiVolumeUp, HiVolumeOff } from "react-icons/hi";
 import { BsFillPlayFill, BsFillPauseFill, BsPlay } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
+import { BASE_URL } from "../utils";
 
 interface homeProps {
   videos: Video[];
@@ -28,7 +29,7 @@ const Home = ({ videos }: homeProps) => {
 };
 
 export const getServerSideProps = async () => {
-  const { data } = await axios.get(`http://localhost:3000/api/post`);
+  const { data } = await axios.get(`${BASE_URL}/api/post`);
 
   return {
     props: {
