@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useState } from "react";
-import GoogleLogin from "react-google-login";
 import { AiOutlineHome, AiOutlineMenu } from "react-icons/ai";
 import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 import Discover from "./Discover";

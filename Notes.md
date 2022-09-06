@@ -9,4 +9,4 @@ This project is shared by Javascript Mastery. As a tiktok web clone and i just l
 
 ## Lastest watch
  - Past 1(Done): https://youtu.be/CcBHZ0t2Qwc?t=8959 
- - Past 2: https://youtu.be/7x-qQ_187rM?t=3047
+ - Past 2: https://youtu.be/7x-qQ_187rM?t=5743
