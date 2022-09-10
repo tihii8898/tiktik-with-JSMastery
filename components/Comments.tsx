@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { GoVerified } from "react-icons/go";
 import { IUser } from "../models";
 import useAuthStore from "../store/authStore";

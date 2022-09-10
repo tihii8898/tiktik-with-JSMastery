@@ -2,14 +2,13 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import { useState } from "react";
 import { GoVerified } from "react-icons/go";
 import NoResult from "../../components/NoResult";
 import VideoCard from "../../components/VideoCard";
 import { IUser, Video } from "../../models";
 import useAuthStore from "../../store/authStore";
 import { BASE_URL } from "../../utils";
-import { userCreatedPostsQuery } from "../../utils/queries";
 
 const Search = ({ videos }: { videos: Video[] }) => {
   const [showAccount, setShowAccount] = useState(true);

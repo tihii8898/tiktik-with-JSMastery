@@ -3,16 +3,16 @@ import { useEffect, useRef, useState } from "react";
 import { Video } from "../../models";
 import { BASE_URL } from "../../utils";
 
-import { IoChevronBackCircleOutline } from "react-icons/io5";
-import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
-import { HiVolumeOff, HiVolumeUp } from "react-icons/hi";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
-import useAuthStore from "../../store/authStore";
+import { HiVolumeOff, HiVolumeUp } from "react-icons/hi";
+import { IoChevronBackCircleOutline } from "react-icons/io5";
 import Comments from "../../components/Comments";
 import LikeBtn from "../../components/LikeBtn";
+import useAuthStore from "../../store/authStore";
 
 interface IProps {
   postDetails: Video;

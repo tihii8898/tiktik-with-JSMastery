@@ -1,7 +1,6 @@
 import axios from "axios";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { GoVerified } from "react-icons/go";
 import NoResult from "../../components/NoResult";
 import VideoCard from "../../components/VideoCard";
