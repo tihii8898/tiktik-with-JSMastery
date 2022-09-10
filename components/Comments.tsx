@@ -41,9 +41,9 @@ const Comments = ({
               {allUsers.map(
                 (user: IUser) =>
                   user._id === (item.postedBy._id || item.postedBy._ref) && (
-                    <div className="p-2 items-center" key={idx}>
+                    <div className="p-2 items-center " key={idx}>
                       <Link href={`/profile/${user._id}`}>
-                        <div className="flex gap-3 flex-start">
+                        <div className="flex gap-3 flex-start cursor-pointer">
                           <div className="w-8 h-8">
                             <Image
                               src={user.image}

@@ -1,11 +1,6 @@
 import axios from "axios";
 import VideoCard from "../components/VideoCard";
 import { Video } from "../models";
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
-import { HiVolumeUp, HiVolumeOff } from "react-icons/hi";
-import { BsFillPlayFill, BsFillPauseFill, BsPlay } from "react-icons/bs";
-import { GoVerified } from "react-icons/go";
 import { BASE_URL } from "../utils";
 
 interface homeProps {
@@ -28,12 +23,22 @@ const Home = ({ videos }: homeProps) => {
   );
 };
 
-export const getServerSideProps = async () => {
-  const { data } = await axios.get(`${BASE_URL}/api/post`);
+export const getServerSideProps = async ({
+  query: { topic },
+}: {
+  query: { topic: string };
+}) => {
+  let response = null;
+
+  if (topic) {
+    response = await axios.get(`${BASE_URL}/api/discover/${topic}`);
+  } else {
+    response = await axios.get(`${BASE_URL}/api/post`);
+  }
 
   return {
     props: {
-      videos: data,
+      videos: response.data,
     },
   };
 };
