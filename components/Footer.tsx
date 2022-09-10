@@ -10,7 +10,10 @@ const ListRender = ({
 }) => (
   <div className={`mt-5 flex flex-wrap gap-2 ${mt && "mt-5"}`}>
     {items.map((item) => (
-      <p className="text-gray-400 text-sm hover:underline cursor-pointer">
+      <p
+        className="text-gray-400 text-sm hover:underline cursor-pointer"
+        key={item}
+      >
         {item}
       </p>
     ))}
